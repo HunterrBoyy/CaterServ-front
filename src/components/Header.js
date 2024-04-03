@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react'
+import Home from '../pages/Home';
+import About from '../pages/About';
 
 const Header = () => {
 
@@ -65,6 +67,8 @@ const Header = () => {
         <div className='flex gap-7'><button className='rounded-full h-[45px] w-[45px] bg-[#d4a762] hover:bg-black hover:text-[#d4a762]'><i class="fa-solid fa-magnifying-glass "></i></button>
          <button className='h-[45px] w-[125px] bg-[#d4a762] rounded-3xl hover:bg-black hover:text-[#d4a762] '>Book Now</button> </div>
       </div>
+      <Home />
+      <About />
     </>
   )
 }
