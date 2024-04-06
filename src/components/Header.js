@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import Home from '../pages/Home';
 import About from '../pages/About';
+import Services from '../pages/Services';
 
 const Header = () => {
 
@@ -69,6 +70,7 @@ const Header = () => {
       </div>
       <Home />
       <About />
+      <Services />
     </>
   )
 }

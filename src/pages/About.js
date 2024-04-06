@@ -39,17 +39,27 @@ const About = () => {
       <div className='bg-[#ffffff] mx-24 pt-48'>
         <div className='grid grid-cols-5 items-center'>
           {array.map((data) => {
-            return <div className='bg-[#D4A762] h-[185px] w-[190px] flex flex-col justify-center items-center rounded-lg'>
+            return <motion.div
+            animate={{y:0}}
+          initial={{y:500}}
+          transition={{duration:1,delay:0.8,type:"spring",bounce:0.28}}
+            className='bg-[#D4A762] h-[185px] w-[190px] flex flex-col justify-center items-center rounded-lg'>
               <i class={data.class}></i>
               <p className='font-semibold text-[50px]'>{data.number}</p>
             <p className='font-medium text-[20px]'>{data.detail}</p>
 
-            </div>
+            </motion.div>
           })}
-          <div className='col-span-2'>
+          <motion.div
+          animate={{y:0}}
+          initial={{y:500}}
+          transition={{duration:1,delay:0.3,type:"spring",bounce:0.28}}
+          className='col-span-2'>
             <img className='rounded-lg' src="https://themewagon.github.io/CaterServ/img/fact.jpg" height={350} width={437}/>
-            <button className='border-black border-[1px] border-solid rounded-[50%] bg-[#ffffff] h-32 w-32 '><i class="fa-sharp fa-solid fa-play text-[70px]"></i></button>
-          </div>
+            {/* <motion.button 
+            className='border-black border-[1px] border-solid rounded-[50%] bg-[#ffffff] h- w-32 '><i class="fa-sharp fa-solid fa-play text-[70px]"></i></motion.button> */}
+            {/* <dotlottie-player src="https://lottie.host/c8aa14e5-b4e7-49a6-9830-fcbd76a1d83b/pUzH1etHU7.json" background="transparent" speed="1" height={128} width={128}loop autoplay></dotlottie-player> */}
+          </motion.div>
         </div>
       </div>
       
